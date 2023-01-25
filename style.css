@@ -24,6 +24,7 @@ h1{
     position:fixed;
     opacity: 1;
     border-bottom: 1px solid black;
+    z-index: 10;
 }
 .logo{
     width: 180px;
@@ -351,7 +352,7 @@ h1{
 .about_col{
     /* background-color: #3a506b; */
     /* background-color: #ced3dc; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 260px;
     height: 340px;
     margin: 10px;
@@ -388,14 +389,25 @@ h1{
     font-family:"Oswald", sans-serif;
     font-weight: 400;
     text-transform: uppercase;
+    
+}
+
+.about_container h1{
+    text-align: center;
+    padding-top:20px;
+    text-align: center;
+    font-size: 35px;
+    font-family:"Oswald", sans-serif;
+    font-weight: 400;
 }
 
 .about_container h2{
-    padding-top:20px;
+    padding-top:15px;
     text-align: center;
     font-size: 25px;
     font-family:"Oswald", sans-serif;
     font-weight: 400;
+    border-bottom: 1px solid black;
 }
 
 .about_team_row{
@@ -433,9 +445,9 @@ h1{
     display:block;
     width: 445px;
     height: auto;
-    background: #bebec4;
-    background: -webkit-linear-gradient(95deg, #bebec4 0%, #767676 100%);
-    background: linear-gradient(95deg, #bebec4 0%, #767676 100%);
+    background: #EAEAEA;
+    /* background: -webkit-linear-gradient(95deg, #bebec4 0%, #767676 100%);
+    background: linear-gradient(95deg, #bebec4 0%, #767676 100%); */
     /* align-items: center;
     justify-content: center; */
     /* border: 1px solid black; */
@@ -515,6 +527,21 @@ h1{
     justify-content: center;
 }
 
+.references_footer{
+    text-align: center;
+}
+
+.references_footer{
+    font-size: 30px;
+    font-family:"Oswald", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+.section3{
+    height: 150vh;
+}
 /* .references_container img{
     
     width: 100%;
