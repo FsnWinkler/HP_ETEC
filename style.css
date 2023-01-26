@@ -595,3 +595,37 @@ h1{
 
 }
 
+.jobs_container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /* text-align: center; */
+}
+
+.jobs_header h1{
+    font-size: 30px;
+    font-family:"Oswald", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.jobs_header{
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 60px;
+}
+
+.jobs_content h2{
+    font-size: 25px;
+    font-family:"Oswald", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+.jobs_container p{
+    font-weight: 400;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
