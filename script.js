@@ -37,3 +37,13 @@ $(".service_col").hover(
         $(this).find(".icon_div").addClass("show");
     }
 );
+
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+      var scroll = $(window).scrollTop();
+      var maxScroll = $(document).height() - $(window).height();
+      var scrollPercent = (scroll / maxScroll) * 100;
+      var color = 'linear-gradient(to bottom, rgba(47,207,47,' + (1 - scrollPercent/100) + ') 0%,rgba(255,255,255,1) 100%)';
+      $('.top-nav').css('background', color);
+    });
+  });
