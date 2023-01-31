@@ -1,20 +1,102 @@
 *{
     margin:0;
     padding:0;
-    font-family: "Oswald", sans-serif;
 
 }
 
+body{
+    font-family: 'Open Sans', serif;
+    font-size: medium;
+    font-weight: normal;
+    padding-top: 70px;
+}
 
-.bg_color{
+
+/* .bg_color{
     width: 100%;
-    background: linear-gradient(180deg, #2fcf2f 0%, #fff 100%);
+    background: linear-gradient(180deg, #369436 0%, #fff 100%);
     /* background-image: linear-gradient(to bottom, #2fcf2f, #00e5be, #00eeff, #c6f1ff, #ffffff); */
-    /* background-image: linear-gradient(to bottom, #ff0000, #ff5d4d, #ff9087, #ffbfbd, #f9eded); */
-}
+    /* background-image: linear-gradient(to bottom, #ff0000, #ff5d4d, #ff9087, #ffbfbd, #f9eded); 
+} */
+
+.slider {
+    /* padding-top:100px; */
+    position: relative;
+    width: 100%;
+    height: 80%;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+    /* background-size: cover;
+    background-position: center; */
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .fixed-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .fixed-title h2{
+    font-size: 80px;
+    font-family: 'Open Sans', serif;
+    color: white;
+    width: 1200px;
+    text-shadow: 3px 3px 5px #333333;
+  }
+  .fixed-title p{
+    font-size: 30px;
+    font-family: 'Open Sans', serif;
+    color: white;
+    width: 1200px;
+    text-shadow: 3px 3px 5px #333333;
+  }
+
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 36px;
+    color: #000;
+  }
+  
+  .left-arrow {
+    left: 20px;
+    color:white;
+  }
+  
+  .right-arrow {
+    right: 20px;
+    color:white;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    
+  }
+
+
 
 h1{
-    font-family:"Oswald", sans-serif;
+    font-family: 'Open Sans', serif;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 30px;
@@ -32,21 +114,25 @@ h1{
 }
 
 .top-nav{
-    font-family: 'Sanchez', serif;
-    width:80%;
-    margin-left:10%;
-    margin-right:10%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    font-family: 'Open Sans', serif;
+    width:100%;
+    top: 0;
+    height:70px;
+    /* margin-left:10%;
+    margin-right:10%; */
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
     display:flex;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(to bottom, rgba(47,207,47,1) 0%,rgba(255,255,255,1) 100%);
-    height: 10px;
+    /* background: linear-gradient(to bottom, rgba(47,207,47,1) 0%,rgba(255,255,255,1) 100%); */
+    background: #ffffff;
     position:fixed;
     opacity: 1;
     /* border-bottom: px solid black; */
-    z-index: 10;
+    z-index: 5;
+    border-top: 5px solid green;
+    border-bottom: 1px solid green;
 }
 .logo{
     width: 180px;
@@ -69,8 +155,8 @@ h1{
 .top-nav ul li a{
     text-decoration: none;
     color: black;
-    font-size:17px;
-    font-family: 'Sanchez', serif;
+    font-size:14px;
+    font-family: 'Open Sans', serif;
     
     text-transform: uppercase;
 }
@@ -93,8 +179,9 @@ h1{
 
 
 .content{
+    background-color: #444447;
     display:block;
-    width:80%;
+    width:100%;
     margin-left:auto;
     margin-right:auto;
     height:100vh;
@@ -137,12 +224,12 @@ h1{
     /* position: relative;
     padding-bottom:20px; */
 
-    font-family: 'Sanchez', serif;
+    font-family: 'Open Sans', serif;
     font-size: 50px;
     /* font-size: 55px;
     font-weight: 800;
     line-height: 1.2; */
-    color: #2FCF2F;
+    color: #369436;
     letter-spacing: 2px;
     animation: shift 4s ease-in-out forwards alternate;
     transform: skewX(0deg);
@@ -190,16 +277,17 @@ h1{
 
 
 .content p{
-    padding-top: 20px;
-    font-family: 'Sanchez', serif;
-    color: #235789;
+    padding-top: 30px;
+    color: white;
     margin:0;
     font-weight:0;
     line-height: 25px;
-    font-size: 18px;
+    font-size:  19px;
 }
 
 .section0{
+    background-color: #444447;
+    margin-top: 60px;
     /* display:flex;
     padding-top:70px; */
     height:100vh;   
@@ -262,7 +350,7 @@ h1{
 
     /* background-color: #3a506b; */
     /* background-color: #dbdbdb; */
-    background-color: #61da61;
+    background-color: #369436;
     /* background: #bebec4;
     background: -webkit-linear-gradient(95deg, #bebec4 0%, #767676 100%);
     background: linear-gradient(95deg, #bebec4 0%, #767676 100%); */
