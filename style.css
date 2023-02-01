@@ -8,7 +8,7 @@ body{
     font-family: 'Open Sans', serif;
     font-size: medium;
     font-weight: normal;
-    padding-top: 70px;
+    /* padding-top: 70px; */
 }
 
 
@@ -23,7 +23,7 @@ body{
     /* padding-top:100px; */
     position: relative;
     width: 100%;
-    height: 80%;
+    height: 90%;
   }
   
   .slide {
@@ -102,16 +102,6 @@ h1{
     font-size: 30px;
 }
 
-.header{
-    float:top;
-    width:100%;
-    padding-top:70px;
-    height:0px;
-    background-color: #ff0000;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
 
 .top-nav{
     font-family: 'Open Sans', serif;
@@ -287,10 +277,10 @@ h1{
 
 .section0{
     background-color: #444447;
-    margin-top: 60px;
+    margin-top: 70px;
     /* display:flex;
     padding-top:70px; */
-    height:100vh;   
+    height:90vh;   
     width: 100%;
     /* background-image: linear-gradient(to bottom, #ff0000, #ff5d4d, #ff9087, #ffbfbd, #f9eded); */
     justify-content: center;
@@ -315,23 +305,28 @@ h1{
     /* background: #EAEAEA; */
 
     /* background-color: #EAEAEA; */
-    height:100vh;
+    background-color: #EEEFEF;
+    height:90vh;
     width: 100%;
 
 }
 
 .service_header h1{
     font-family: 'Open Sans', serif;
+<<<<<<< HEAD
     font-weight: 400;
+=======
+    font-weight: 500;
+>>>>>>> bfd647d2f6b190d2d394d6357e989f32e44dfd29
     text-transform: uppercase;
-    font-size: 50px;
-    padding-bottom: 20px;
+    font-size: 40px;
+    padding-bottom: 0px;
 }
 
 .service_container{
     height: 100vh;
     width: 80%;
-    background-color: #fff;
+    background-color: #EEEFEF;
     margin-left:auto;
     margin-right: auto;
 
@@ -343,6 +338,7 @@ h1{
     align-items: center;
     justify-content: center;
     margin: 0px;
+
     
 }
 
@@ -350,18 +346,20 @@ h1{
 
     /* background-color: #3a506b; */
     /* background-color: #dbdbdb; */
-    background-color: #369436;
+    background: #fff;  /* fallback for old browsers */
+    
+
     /* background: #bebec4;
     background: -webkit-linear-gradient(95deg, #bebec4 0%, #767676 100%);
     background: linear-gradient(95deg, #bebec4 0%, #767676 100%); */
-    width: 350px;
+    width: 320px;
     height: 200px;
-    margin: 15px;
+    margin: 8px;
     display:flex;
     /* flex:3; */
     justify-content: center;
     /* border: 1px solid black; */
-    border-radius: 25px;
+    /* border-radius: 5px; */
     cursor: pointer;
     -webkit-box-shadow: 3px 3px 10px 3px #ddd;
     -moz-box-shadow: 3px 3px 10px 3px #ddd;
@@ -373,17 +371,22 @@ h1{
 }
 
 .service_col:hover{
-    background-color: #fff;
+    background-color: #EEEFEF;
     border: none;
 }
 
 .service_col h1{
-    font-family: 'Sanchez', serif;
+    /* font-family: 'Open Sans', serif;
     text-transform: uppercase;
     color: #444447;
-    font-weight: 400;
-    font-size: 19px;
-    margin-top: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 5px; */
+    font-family: 'Open Sans', serif;
+    font-weight: 600;
+    color: #222;
+    font-size: 20px;
+    /* line-height: 1.2em; */
 }
 
 .icon_div{
@@ -459,8 +462,8 @@ h1{
 
 .icon{
     
-    width: 65%;
-    height: 65%;
+    width: 45%;
+    height: 45%;
     object-fit: contain;
 }
 
@@ -475,7 +478,7 @@ h1{
 .service_header p {
     font-weight: 400;
     font-size: 15px;
-    font-family: 'Sanchez', serif;
+    font-family: 'Open Sans', serif;
 }
 
 
@@ -635,7 +638,7 @@ h1{
     display:block;
     width: 450px;
     height: auto;
-    background:#b1edb1;
+    background:green;
     /* background: -webkit-linear-gradient(95deg, #bebec4 0%, #767676 100%);
     background: linear-gradient(95deg, #bebec4 0%, #767676 100%); */
     /* align-items: center;
@@ -730,7 +733,7 @@ h1{
 }
 
 .section3{
-    /* background-color: #EAEAEA; */
+    background-color: #fff;
     height: 170vh;
 }
 /* .references_container img{
@@ -758,7 +761,7 @@ h1{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
+    background-color: #EEEFEF;  
 }
 
 .loxone_content{
@@ -789,7 +792,7 @@ h1{
 }
 
 .section4{
-    /* background-color: #EAEAEA; */
+    background-color: #EEEFEF;
     height:100vh;
 
 }
