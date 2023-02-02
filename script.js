@@ -80,3 +80,24 @@ $rightArrow.click(function () {
 });
 
 changeSlide();
+
+
+window.addEventListener("hashchange", () => {
+  if (
+    window.location.hash &&
+    window.location.hash.startsWith("#slider-span")
+  ) {
+    document.getElementById("ref_con").scrollIntoView();
+  }
+});
+
+var images = document.querySelectorAll(".image-slider img");
+
+for (var i = 0; i < images.length; i++) {
+  images[i].addEventListener("click", function() {
+    for (var j = 0; j < images.length; j++) {
+      images[j].classList.remove("selected");
+    }
+    this.classList.add("selected");
+  });
+}
