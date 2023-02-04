@@ -645,6 +645,7 @@ h1{
     -webkit-box-shadow: 3px 3px 10px 5px #dddddd;
     -moz-box-shadow: 3px 3px 10px 5px #dddddd;
     box-shadow: 3px 3px 10px 5px #dddddd;
+    transition: all 1s ease-in-out;
 }
 
 .references_container{
@@ -957,22 +958,34 @@ h1{
     overflow: hidden;
   }
   
-  .image-slider img {
-    flex-basis: 20%;
-    height: 200px;
-    width: 200px;
-    padding-bottom: 20%;
-    margin: 1%;
-    transition: transform 0.5s ease-in-out;
+.image-slider img {
+flex-basis: 20%;
+height: 200px;
+width: 200px;
+padding-bottom: 20%;
+margin: 1%;
+transition: transform 0.5s ease-in-out;
+}
+
+.image-slider img.selected {
+/* flex-basis: 40%; */
+/* padding-bottom: 40%; */
+transform: scale(1.2);
+position: relative;
+z-index: 1;
+}
+
+.reference_card.prev {
+    transform: translateX(-100%);
   }
   
-  .image-slider img.selected {
-    /* flex-basis: 40%; */
-    /* padding-bottom: 40%; */
-    transform: scale(1.2);
-    position: relative;
-    z-index: 1;
-  }
+.reference_card.next {
+transform: translateX(100%);
+}
+
+.reference_card.current {
+transform: translateX(0);
+}
 
 
 .section3{
