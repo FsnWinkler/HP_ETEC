@@ -51,31 +51,24 @@ $(".service_col").hover(
 
 
 
-const slides = document.querySelectorAll('.reference_card');
-let currentSlide = 0;
+let index = 0;
 
-const prevButton = document.querySelector('.pre-btn');
-const nextButton = document.querySelector('.nxt-btn');
+function slideLeft() {
+    console.log("fg")
+    
+    const sliderWrapper = document.querySelector(".reference_container");
+    console.log(sliderWrapper)
+    // index = Math.max(index - 1, -4);
+    // sliderWrapper.style.transform = `translateX(${index * 100}%)`;
 
-prevButton.addEventListener('click', function() {
-  slides[currentSlide].classList.remove('current');
-  slides[currentSlide].classList.add('next');
+}
 
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-
-  slides[currentSlide].classList.remove('prev');
-  slides[currentSlide].classList.add('current');
-});
-
-nextButton.addEventListener('click', function() {
-  slides[currentSlide].classList.remove('current');
-  slides[currentSlide].classList.add('prev');
-
-  currentSlide = (currentSlide + 1) % slides.length;
-
-  slides[currentSlide].classList.remove('next');
-  slides[currentSlide].classList.add('current');
-});
+function slideRight() {
+    console.log("fg")
+  const sliderWrapper = document.querySelector(".reference_container");
+  index = Math.min(index + 1, 0);
+  sliderWrapper.style.transform = `translateX(${index * 100}%)`;
+}
 
 
 
