@@ -50,25 +50,32 @@ $(".service_col").hover(
 
 
 
+const sliderContainer = document.querySelector('.section3');
+const slider = document.querySelector('.slider2');
+const slides = Array.from(slider.children);
+const leftArrow = document.querySelector('.left');
+const rightArrow = document.querySelector('.right');
 
-let index = 0;
+const showSlides = (slider, index) => {
+  slider.style.transform = `translateX(-${index * 100 / slides.length}%)`;
+};
 
-function slideLeft() {
-    console.log("fg")
-    
-    const sliderWrapper = document.querySelector(".reference_container");
-    console.log(sliderWrapper)
-    // index = Math.max(index - 1, -4);
-    // sliderWrapper.style.transform = `translateX(${index * 100}%)`;
+let currentIndex = 0;
+showSlides(slider, currentIndex);
+console.log(rightArrow)
 
-}
+rightArrow.addEventListener('click', () => {
+    console.log(1)
+    currentIndex = (currentIndex + 1) % slides.length;
+    console.log(slider)
+    showSlides(slider, currentIndex);
+});
+  
+leftArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex + slides.length - 1) % slides.length;
+    showSlides(slider, currentIndex);
+});
 
-function slideRight() {
-    console.log("fg")
-  const sliderWrapper = document.querySelector(".reference_container");
-  index = Math.min(index + 1, 0);
-  sliderWrapper.style.transform = `translateX(${index * 100}%)`;
-}
 
 
 
