@@ -50,6 +50,9 @@ $(".service_col").hover(
 
 
 
+
+
+
 const sliderContainer = document.querySelector('.section3');
 const slider = document.querySelector('.slider2');
 const slides = Array.from(slider.children);
