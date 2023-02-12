@@ -48,7 +48,30 @@ $(".service_col").hover(
 //     });
 //   });
 
+const silder_frontpage = document.querySelector(".slider");
+const left_arr = document.querySelector(".left-arrow");
+const right_arr = document.querySelector(".right-arrow");
+const slide = document.getElementsByClassName("slide");
 
+let currentImage = 0;
+
+left_arr.addEventListener("click", function() {
+  slide[currentImage].classList.remove("active");
+  currentImage--;
+  if (currentImage < 0) {
+    currentImage = slide.length - 1;
+  }
+  slide[currentImage].classList.add("active");
+});
+
+right_arr.addEventListener("click", function() {
+    slide[currentImage].classList.remove("active");
+  currentImage++;
+  if (currentImage >= slide.length) {
+    currentImage = 0;
+  }
+  slide[currentImage].classList.add("active");
+});
 
 
 
