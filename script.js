@@ -73,6 +73,24 @@ $(".service_col").hover(
 //   slide[currentImage].classList.add("active");
 // });
 
+$(document).ready(function() {
+  // When the mouse enters the image
+  $('.grow-on-hover').hover(function() {
+    // Increase the size of the image by 10%
+    $(this).css({
+      'transform': 'scale(1.1)',
+      'z-index': '1'
+    });
+  }, function() {
+    // When the mouse leaves, restore the original size and position of the image
+    $(this).css({
+      'transform': 'scale(1)',
+      'position': 'static',
+      'z-index': '0'
+    });
+  });
+});
+
 
 const slider_frontpage = document.querySelector(".slider");
 const left_arr = document.querySelector(".left-arrow");
@@ -117,34 +135,36 @@ right_arr.addEventListener("click", function() {
 
 
 
-const sliderContainer = document.querySelector('.section3');
-const slider = document.querySelector('.slider2');
-const slides = Array.from(slider.children);
-const leftArrow = document.querySelector('.left');
-const rightArrow = document.querySelector('.right');
+// const sliderContainer = document.querySelector('.section3');
+// const slider = document.querySelector('.slider2');
+// const slides = Array.from(slider.children);
+// const leftArrow = document.querySelector('.left');
+// const rightArrow = document.querySelector('.right');
 
-const showSlides = (slider, index) => {
-  slider.style.transform = `translateX(-${index * 100 / slides.length}%)`;
-};
+// const showSlides = (slider, index) => {
+//   slider.style.transform = `translateX(-${index * 100 / slides.length}%)`;
+// };
 
-let currentIndex = 0;
-showSlides(slider, currentIndex);
-console.log(rightArrow)
+// let currentIndex = 0;
+// showSlides(slider, currentIndex);
+// console.log(rightArrow)
 
-rightArrow.addEventListener('click', () => {
-    console.log(1)
-    currentIndex = (currentIndex + 1) % slides.length;
-    console.log(slider)
-    showSlides(slider, currentIndex);
-});
+// rightArrow.addEventListener('click', () => {
+//     console.log(1)
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     console.log(slider)
+//     showSlides(slider, currentIndex);
+// });
   
-leftArrow.addEventListener('click', () => {
-    currentIndex = (currentIndex + slides.length - 1) % slides.length;
-    showSlides(slider, currentIndex);
-});
+// leftArrow.addEventListener('click', () => {
+//     currentIndex = (currentIndex + slides.length - 1) % slides.length;
+//     showSlides(slider, currentIndex);
+// });
 
 
 
+const ref_slides = document.querySelector(".ref_slider");
 
+console.log(ref_slides)
 
 

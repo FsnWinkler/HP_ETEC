@@ -193,6 +193,7 @@ body{
     display:flex;
     justify-content: center;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .service_col:hover{
@@ -318,8 +319,10 @@ body{
     width: 600px;
     height:400px;
     opacity: 0.5;
-    padding:5px;
+    padding:20px;
+    cursor: pointer;
 }
+
 
 .loxone_content p{
     font-size: 1rem;
@@ -329,6 +332,7 @@ body{
 }
 
 .loxone_partner img{
+
     width:30%;
 }
 
@@ -344,6 +348,11 @@ body{
     color: white;
 }
 
+.grow-on-hover {
+    /* Set the transition duration for smooth animation */
+    transition: all 0.2s ease-in-out;
+  }
+  
 
 /* -------------------------------------------- REFERENCES SECTION -------------------------------------------- */
 
@@ -363,7 +372,85 @@ body{
     color: var(--green);                          ;
 }
 
-.slider2 h1{
+.ref_slider_container{
+    display:flex;
+    width:100%;
+    height:500px;
+    justify-content: center;
+}
+
+.ref_slider{
+    display:flex;
+    width:80%;
+    overflow: hidden;
+    margin-top:50px;
+}
+
+.ref_slide{
+    min-width:50%;
+}
+
+.ref_header h2{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom:10px;
+}
+
+.ref_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.ref_content > a{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    width:100%;
+    height:100%;
+}
+
+.ref_content img{
+    cursor: pointer;
+    z-index: 5;
+}
+
+.ref_header{
+    color:var(--green);
+    font-size: 1.25rem;
+    padding-bottom: 5px;
+}
+
+.left, .right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.ref_nav{
+    width:100%;
+    height:600px;
+    position:absolute;
+}
+
+.left {
+    left: 20px;
+    color:white;
+}
+
+.right {
+    right: 20px;
+    color:white;
+}
+
+
+
+/* .slider2 h1{
     padding-bottom: 10px;
     font-weight: 500;
     text-transform: uppercase;
@@ -377,12 +464,12 @@ body{
     height: 400px;
     transform: translateX(0);
     transition: transform 0.9s ease;
-    /* border-top: 1px solid var(--green);
-    border-bottom: 1px solid var(--green); */
+    border-top: 1px solid var(--green);
+
 }
   
 .slide2 {
-    min-width: 33%;
+    min-width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -421,7 +508,7 @@ body{
 .right {
     right: 20px;
     color:white;
-}
+} */
 
 /* -------------------------------------------- ABOUT SECTION -------------------------------------------- */
 
