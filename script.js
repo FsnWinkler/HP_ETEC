@@ -162,9 +162,54 @@ right_arr.addEventListener("click", function() {
 // });
 
 
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   loop: true,
 
-const ref_slides = document.querySelector(".ref_slider");
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
 
-console.log(ref_slides)
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   // And if we need scrollbar
+//   // scrollbar: {
+//   //   el: '.swiper-scrollbar',
+//   // },
+// });
+
+// const swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 2,
+//   spaceBetween: 20,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev"
+//     }
+//   },
+// });
 
 
+var swiper = new Swiper(".mySwiper", {
+  // loop: true,
+  slidesPerView: 3,
+  spaceBetween: 0,
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  mousewheel: true,
+  keyboard: true,
+});

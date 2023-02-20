@@ -152,7 +152,7 @@ body{
 }
 
 .section0{
-    margin-top: 70px;
+    margin-top: 50px;
     height:90vh;   
     width: 100%;
     justify-content: center;
@@ -374,10 +374,55 @@ body{
 
 .ref_slider_container{
     display:flex;
-    width:100%;
+    width:70%;
     height:500px;
     justify-content: center;
 }
+
+.swiper {
+    padding-top:60px;
+    width: 95%;
+    height: 550px;
+  }
+
+.swiper-slide{
+    position:relative;
+    width:605px;
+    height:432px;
+}
+
+.ref_content{
+    display:flex;
+    justify-content: center;
+
+}
+
+.ref_content a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width:513px;
+    height:90%;
+    /* width:100%;
+    height:400px; */
+}
+
+.ref_content img{
+    width:100%;
+    height:100%;
+    opacity: 0.8;
+    /* width:605px;
+    height:432px; */
+}
+
+
+
+
+
+
+
+
 
 .ref_slider{
     display:flex;
@@ -388,29 +433,29 @@ body{
 
 .ref_slide{
     min-width:50%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
 }
 
+.ref_slide:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+
 .ref_header h2{
+    color: white;
     text-align: center;
     font-weight: 500;
     margin-bottom:10px;
 }
 
-.ref_content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
 
 
-.ref_content > a{
-    display:flex;
-    justify-content: center;
-    text-align: center;
-    width:100%;
-    height:100%;
-}
+
 
 .ref_content img{
     cursor: pointer;
@@ -448,67 +493,10 @@ body{
     color:white;
 }
 
-
-
-/* .slider2 h1{
-    padding-bottom: 10px;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    color: var(--green);
+.hidden{
+    display:none;
 }
 
-.slider2 {
-    display: flex;
-    width: 100%;
-    height: 400px;
-    transform: translateX(0);
-    transition: transform 0.9s ease;
-    border-top: 1px solid var(--green);
-
-}
-  
-.slide2 {
-    min-width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.slide2 a{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide2 img{
-
-    width:70%;
-    -webkit-box-shadow: 3px 3px 10px 3px #ddd;
-    -moz-box-shadow: 3px 3px 10px 3px #ddd;
-    box-shadow: 3px 3px 10px 3px #ddd;
-}
-
-.left, .right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.left {
-    left: 20px;
-    color:white;
-}
-
-.right {
-    right: 20px;
-    color:white;
-} */
 
 /* -------------------------------------------- ABOUT SECTION -------------------------------------------- */
 
@@ -525,17 +513,25 @@ body{
 }
 
 .about_col{
-    border: 1px solid white;
-    margin: 0px;
+    margin-left: 40px;
+    margin-right:40px;
+    background-color: white;
+    /* border: 1px solid white; */
+    /* margin: 0px; */
     display: flex;
     padding-right: 10px;
+    border-radius: 3px;
+    opacity: 0.7;
+    z-index: 1;
 }
+
+
 
 .about_col p{
     padding-bottom: 5px;
     padding-left:20px;
     font-size: 1rem;
-    color:white;
+    color:black;
 }
 
 .about_col h3{
@@ -568,6 +564,7 @@ body{
     text-transform: uppercase;
     font-size: 1.25rem;
     padding-top: 20px;
+    padding-bottom:50px;
     color: white;
 }
 
@@ -581,6 +578,7 @@ body{
 
 .about_team_row{
     display:flex;
+    justify-content: center;
 }
 
 .about_team_col p{
@@ -592,7 +590,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:18%;
+    width:300px;
     height:200px;
 
 }.about_team_col h2{
