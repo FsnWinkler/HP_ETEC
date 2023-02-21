@@ -32,7 +32,7 @@ body{
 
 .switch span {		    /* Der graue Untergrund des Schalters */ 
 	position: absolute;
-	background-color: #ccc;
+	background-color: #9a9a9a;
 	border-radius: 17px;
 	cursor: pointer;
 	top: 0;
@@ -43,7 +43,7 @@ body{
 }
 
 .switch span::before {    /* Der kreisrunde Button im Switch */ 
-	background-color: white;
+	background-color: rgb(255, 255, 255);
 	border-radius: 50%;
 	content: "";
 	position: absolute;
@@ -54,7 +54,7 @@ body{
 }
 
 input:checked + span {
-    background-color: var(--bg);
+    background-color: #9a9a9a;
   }
   
 input:checked + span::before {
@@ -232,7 +232,7 @@ input:checked + span::before {
 }
 
 .service_col{
-    background: #414444;
+    background: #a1a1a1;
     width: 320px;
     height: 200px;
     margin: 15px;
@@ -247,6 +247,13 @@ input:checked + span::before {
 }
 
 .service_col h1{
+    padding-top: 40px;
+    font-weight: 500;
+    color: black;
+    font-size: 1.25rem;
+}
+
+.service_col h2{
     padding-top: 40px;
     font-weight: 500;
     color: var(--green);
