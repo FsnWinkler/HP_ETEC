@@ -8,9 +8,14 @@
 :root {
     --bg: #1e2323;
     --green: #88b452;
+    --normal-text: #ffffff;
+    /* --bg: #efefef;
+    --green: #88b452;
+    --normal-text: #000000; */
+
   }
 
-body{
+body{  
     font-family: 'Open Sans', serif;
     font-size: medium;
     font-weight: normal;
@@ -18,6 +23,47 @@ body{
 }
 
 /* -------------------------------------------- NAVBAR -------------------------------------------- */
+.switch {                   /* Das label-Element */ 
+	position: relative; /* Um im nächsten Schritt den runden Button mit position:absolute festzusetzen */ 
+	width: 44px;
+	height: 24px;
+	display: inline-block;
+}
+
+.switch span {		    /* Der graue Untergrund des Schalters */ 
+	position: absolute;
+	background-color: #ccc;
+	border-radius: 17px;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: background-color .4s;
+}
+
+.switch span::before {    /* Der kreisrunde Button im Switch */ 
+	background-color: white;
+	border-radius: 50%;
+	content: "";
+	position: absolute;
+	left: 2px;
+	bottom: 2px;
+	height: 18px;
+	width: 18px;
+}
+
+input:checked + span {
+    background-color: var(--bg);
+  }
+  
+input:checked + span::before {
+    transform: translateX(20px);
+  }
+
+.switch input {
+	display: none;
+}
 
 .top-nav{
     font-family: 'Open Sans', serif;
@@ -27,12 +73,12 @@ body{
     display:flex;
     align-items: center;
     justify-content: space-around;
-    background: #1e2323;
+    background: var(--bg);
     position:fixed;
     opacity: 1;
     z-index: 5;
-    border-top: 3px solid #88b452;
-    border-bottom: 1px solid #88b452;
+    border-top: 3px solid var(--green);
+    border-bottom: 1px solid var(--green);
 }
 
 .logo{
@@ -49,7 +95,7 @@ body{
 
 .top-nav ul li a{
     text-decoration: none;
-    color: #88b452;
+    color: var(--green);
     font-size:14px;
     font-family: 'Open Sans', serif;
     
@@ -60,7 +106,7 @@ body{
     content: "";
     height:3px;
     width: 0%;
-    background: #009688;
+    background: var(--green);
     position:absolute;
     left:0;
     bottom: -10px;
@@ -72,7 +118,7 @@ body{
 }
 
 .nav_contact{
-    color:white;
+    color:var(--normal-text);
 }
 
 /* -------------------------------------------- FRONTPAGE SLIDER -------------------------------------------- */
@@ -108,7 +154,7 @@ body{
   
 .fixed-title h2{
     font-size: 80px;
-    color: #88b452;
+    color: var(--green);
     width: 1200px;
     text-shadow: 3px 3px 5px #333333;
 }
@@ -252,19 +298,19 @@ body{
 .service_header p {
     font-weight: 400;
     font-size: 15px;
-    color: white;
+    color: var(--normal-text);
 }
 
 .service_content p{
     padding-top:8px;
-    color:white;
+    color:var(--normal-text);
 }
 
 /* -------------------------------------------- LOXONE SECTION -------------------------------------------- */
 
 .section4{
     background-color: var(--bg);
-    height:135vh;    
+    height:150vh;    
 }
 
 .loxone_header{
@@ -274,7 +320,7 @@ body{
 }
 
 .loxone_header p{
-    color:white;
+    color:var(--normal-text);
     font-size: 0.9rem;
 }
 
@@ -305,7 +351,7 @@ body{
   
 .loxone_row h2 {
     font-size: 1rem;
-    color:white;
+    color:var(--normal-text);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -328,11 +374,11 @@ body{
     font-size: 1rem;
     width: 50%;
     padding-left:40px;
-    color:white;  
+    color:var(--normal-text);  
 }
 
 .loxone_partner img{
-
+    opacity: 0.8;
     width:30%;
 }
 
@@ -345,8 +391,16 @@ body{
 .loxone_partner p{
     font-size: 1rem;
     padding-left:15px;
-    color: white;
+    color: var(--normal-text);
 }
+
+.loxone_footer{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color:var(--normal-text);
+}
+
 
 .grow-on-hover {
     /* Set the transition duration for smooth animation */
@@ -369,7 +423,7 @@ body{
     font-weight: 500;
     text-transform: uppercase;
     font-size: 2rem;
-    color: var(--green);                          ;
+    color: var(--green);                        
 }
 
 .ref_slider_container{
@@ -383,6 +437,9 @@ body{
     padding-top:60px;
     width: 95%;
     height: 550px;
+    border-top:2px solid var(--normal-text);
+    border-bottom:2px solid var(--normal-text);
+    margin-top:20px;
   }
 
 .swiper-slide{
@@ -447,7 +504,7 @@ body{
   }
 
 .ref_header h2{
-    color: white;
+    color: var(--normal-text);
     text-align: center;
     font-weight: 500;
     margin-bottom:10px;
@@ -485,12 +542,12 @@ body{
 
 .left {
     left: 20px;
-    color:white;
+    color:var(--normal-text);
 }
 
 .right {
     right: 20px;
-    color:white;
+    color:var(--normal-text);
 }
 
 .hidden{
@@ -521,7 +578,7 @@ body{
     display: flex;
     padding-right: 10px;
     border-radius: 3px;
-    opacity: 0.7;
+    opacity: 0.8;
     z-index: 1;
 }
 
@@ -561,11 +618,19 @@ body{
 
 .about_container h3{
     font-weight: 500;
+    font-size: 1rem;
+    padding-bottom:100px;
+    color: var(--normal-text);
+}
+
+.about_container h4{
+    font-weight: 6         00;
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     padding-top: 20px;
     padding-bottom:50px;
-    color: white;
+    padding-left:20px;
+    color: black;
 }
 
 .about_container h2{
@@ -573,7 +638,7 @@ body{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 400;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--normal-text);
 }
 
 .about_team_row{
@@ -582,7 +647,7 @@ body{
 }
 
 .about_team_col p{
-    color:white;
+    color:var(--normal-text);
 }
 
 .about_team_col{
@@ -616,7 +681,7 @@ body{
 .jobs_header{
     text-align: center;
     padding-bottom: 60px;
-    color:white;
+    color:var(--normal-text);
 }
 
 .jobs_content{
@@ -634,7 +699,7 @@ body{
 .jobs_container p{
     font-weight: 400;
     font-size: 1rem;
-    color:white;
+    color:var(--normal-text);
 }
 
 /* -------------------------------------------- JOBS SECTION -------------------------------------------- */
@@ -659,7 +724,7 @@ body{
 .contact_content p{
     font-size: 1rem;
     font-weight: 500;
-    color:white;
+    color:var(--normal-text);
 }
 
 .contact_address{

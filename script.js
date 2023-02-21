@@ -132,6 +132,21 @@ right_arr.addEventListener("click", function() {
   slideInterval = setInterval(changeSlide, 8000);
 });
 
+const root_values = document.querySelector(':root');
+const input = document.getElementById('toggleswitch');
+
+console.log(input.checked)
+
+input.addEventListener('change',function(){
+  if(this.checked) {
+    root_values.style.setProperty('--bg', '#efefef');
+    root_values.style.setProperty('--normal-text', '#000000');
+  } else {
+    root_values.style.setProperty('--bg', '#1e2323');
+    root_values.style.setProperty('--normal-text', '#ffffff');
+  }
+});
+
 
 
 
