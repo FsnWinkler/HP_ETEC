@@ -712,18 +712,24 @@ input:checked + span::before {
 .contact_header{
     text-align: center;
     padding-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
+}
+
+.contact_container{
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 150px;;
 }
 
 .contact_content{
-    width: 100%;
     display:flex;
     justify-content: center;
 }
 
 .contact_content p{
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 400;
     color:var(--normal-text);
 }
 
