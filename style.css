@@ -8,7 +8,7 @@
 :root {
     --bg: #1e2323;
     --green: #88b452;
-    --normal-text: #ffffff;
+    --normal-text: #fefeff;
     /* --bg: #efefef;
     --green: #88b452;
     --normal-text: #000000; */
@@ -235,11 +235,11 @@ input:checked + span::before {
     background: #a1a1a1;
     width: 320px;
     height: 200px;
-    margin: 15px;
+    margin: 12px;
     display:flex;
     justify-content: center;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .service_col:hover{
@@ -511,6 +511,7 @@ input:checked + span::before {
   }
 
 .ref_header h2{
+    font-size: 1.5rem;
     color: var(--normal-text);
     text-align: center;
     font-weight: 500;
@@ -579,7 +580,7 @@ input:checked + span::before {
 .about_col{
     margin-left: 40px;
     margin-right:40px;
-    background-color: white;
+    background-color: #efefef;
     /* border: 1px solid white; */
     /* margin: 0px; */
     display: flex;
@@ -612,7 +613,8 @@ input:checked + span::before {
 
 .section2 img{
     width: 163px;
-    height: 229px;  
+    height: 229px; 
+    margin: 3px; 
 }
 
 .about_container h1{

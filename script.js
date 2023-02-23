@@ -139,7 +139,7 @@ console.log(input.checked)
 
 input.addEventListener('change',function(){
   if(this.checked) {
-    root_values.style.setProperty('--bg', '#efefef');
+    root_values.style.setProperty('--bg', 'white');
     root_values.style.setProperty('--normal-text', '#000000');
   } else {
     root_values.style.setProperty('--bg', '#1e2323');
