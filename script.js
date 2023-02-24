@@ -147,6 +147,11 @@ input.addEventListener('change',function(){
   }
 });
 
+function toggleText() {
+  const hiddenText = document.querySelector('.hidden-text');
+  hiddenText.classList.toggle('visible-text');
+}
+
 
 
 
