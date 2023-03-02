@@ -9,6 +9,7 @@
     --bg: #1e2323;
     --green: #88b452;
     --normal-text: #fefeff;
+    --border-light-black: rgba(255,255,255,0.1)
     /* --bg: #efefef;
     --green: #88b452;
     --normal-text: #000000; */
@@ -317,7 +318,13 @@ input:checked + span::before {
 
 .section4{
     background-color: var(--bg);
-    height:150vh;    
+    height:150vh;   
+}
+
+.border-top{
+    width: 100%;
+    height:2px;
+    background-color: var(--border-light-black);
 }
 
 .loxone_header{
@@ -333,7 +340,7 @@ input:checked + span::before {
 
 .loxone_container{
     height: 100vh;
-    width: 80%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -421,8 +428,13 @@ input:checked + span::before {
     background-color: var(--bg);
     position: relative;
     width: 100%;
-    height: 800px;
     overflow: hidden;
+}
+
+.references_container{
+    width:95%;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .section3 h1{
@@ -430,30 +442,30 @@ input:checked + span::before {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 2rem;
-    color: var(--green);                        
+    color: var(--green);
+    margin-top:20px;                        
 }
 
 .ref_slider_container{
     display:flex;
     width:70%;
-    height:500px;
+
     justify-content: center;
 }
 
 .swiper {
-    padding-top:60px;
-    width: 95%;
-    height: 550px;
-    border-top:2px solid var(--normal-text);
-    border-bottom:2px solid var(--normal-text);
-    margin-top:20px;
+    width: 100%;
+    height: 440px;
+    /* border-top:2px solid var(--border-light-black);
+    border-bottom:2px solid var(--border-light-black); */
+    margin-top:60px;
   }
 
-.swiper-slide{
+/* .swiper-slide{
     position:relative;
     width:605px;
     height:432px;
-}
+} */
 
 .ref_content{
     display:flex;
@@ -466,7 +478,7 @@ input:checked + span::before {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    width:513px;
+    width:480px;
     height:90%;
     /* width:100%;
     height:400px; */
@@ -521,7 +533,7 @@ input:checked + span::before {
 
 
 
-
+/* 
 .ref_content img{
     cursor: pointer;
     z-index: 5;
@@ -560,30 +572,30 @@ input:checked + span::before {
 
 .hidden{
     display:none;
-}
+} */
 
 
 /* -------------------------------------------- ABOUT SECTION -------------------------------------------- */
 
 .section2{
     background-color: 	var(--bg);
-    height:100vh;
     width: 100%;
     display:flex;
     justify-content: center;
 }
 
-/* .about_container{
-    display:flex;
-    justify-content: center;
-} */
+.about_container{
+    width:95%;
+}
+
+
 
 .about_row{
-    min-width:80%;
+    
     display:flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom:60px;
+    justify-content: center;
+    margin-bottom:20px;
 }
 
 .about_col{
@@ -593,8 +605,8 @@ input:checked + span::before {
     /* border: 1px solid white; */
     /* margin: 0px; */
     display: flex;
-    padding-right: 10px;
-    border-radius: 10px;
+    padding-right: 40px;
+    border-radius: 5px;
     opacity: 0.8;
     z-index: 1;
 }
@@ -617,7 +629,7 @@ input:checked + span::before {
     display:block;
     text-align: center;
     padding-top:20px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 
 .section2 img{
@@ -686,7 +698,14 @@ input:checked + span::before {
 
 .section6{
     background-color: var(--bg);
-    height:70vh;
+
+}
+
+.jobs_container{
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom:40px;
 }
 
 .jobs_header h1{
@@ -734,7 +753,7 @@ input:checked + span::before {
     box-sizing: border-box;
     cursor: pointer;
     padding:30px;
-    transition: max-height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
   }
 
   .clickable-element:hover {
@@ -759,11 +778,15 @@ input:checked + span::before {
   }
 
   .expanded {
+    
     height: auto;
-    min-height: 180px;
+    min-height: 350px;
   }
 
   .hidden-text {
+    position:absolute;
+    top:100px;
+    left:10px;
     display: none;
   }
 
@@ -771,24 +794,83 @@ input:checked + span::before {
     display: block;
   }
 
-/* -------------------------------------------- JOBS SECTION -------------------------------------------- */
+
+  .accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+  .accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  }
+  .accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+  }
+  .accordion-item-header.active::after {
+    content: "\2212";
+  }
+  .accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+  .accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  }
+
+  .accordion-item h2{
+    font-size: 1.25rem;
+    color: var(--green)
+  }
+
+  .accordion-item p{
+    color:black;
+    
+  }
+  
+  @media(max-width:767px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+/* -------------------------------------------- CONTACT SECTION -------------------------------------------- */
 
 .section5{
     background-color: var(--bg);
-    height: 90vh;
 }
 
 .contact_header{
     text-align: center;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 80px;
 }
 
 .contact_container{
-    max-width:1200px;
+    width:95%;
     margin-left:auto;
     margin-right:auto;
-    padding-bottom: 150px;;
+    padding-bottom:20px;
 }
 
 .contact_content{
@@ -823,12 +905,12 @@ input:checked + span::before {
 }
 
 .contact_footer{
+    padding-top:100px;
     width:100%;
     height:500px;
 }
 
 .map{
-    padding-top: 40px;
     width:100%;
     height:500px; 
 }
