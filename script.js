@@ -147,9 +147,38 @@ input.addEventListener('change',function(){
   }
 });
 
+
+// JOBS TOGGLE AD
+
+let counter = 0;
 function toggleText() {
   const hiddenText = document.querySelector('.hidden-text');
   hiddenText.classList.toggle('visible-text');
+  const down_arrow = document.querySelector(".jobs_arrow_down");
+  const up_arrow = document.querySelector(".jobs_arrow_up");
+  console.log(down_arrow)
+  console.log(up_arrow)
+  if (counter % 2 == 0){
+    down_arrow.classList.remove('visible-text')
+    down_arrow.classList.add('hidden-text')
+    up_arrow.classList.add('visible-text')
+    up_arrow.classList.remove('hidden-text')
+    counter++;
+    console.log(counter)
+
+  }
+  else{
+    up_arrow.classList.remove('visible-text')
+    up_arrow.classList.add('hidden-text')
+    down_arrow.classList.add('visible-text')
+    down_arrow.classList.remove('hidden-text')
+    counter++;
+    console.log(counter)
+  }
+
+
+  
+
 }
 
 

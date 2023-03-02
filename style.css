@@ -722,6 +722,7 @@ input:checked + span::before {
 
 
 .clickable-element {
+    position:relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -740,15 +741,21 @@ input:checked + span::before {
     background-color: var(--bg);
   }
 
-  .jobs_arrow {
-    width: 20px;
-    height: 20px;
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-    padding: 5px;
-    margin-left: 10px;
-    background-color: white;
+  .jobs_header_content{
+    position:absolute;
+    top:5px;
+    left:10px;
+  }
+
+  .jobs_arrow_up {
+    position:absolute;
+    right:5px;
+    top:35px;
+  }
+  .jobs_arrow_down {
+    position:absolute;
+    right:5px;
+    top:35px;
   }
 
   .expanded {
