@@ -9,7 +9,8 @@
     --bg: #1e2323;
     --green: #88b452;
     --normal-text: #fefeff;
-    --border-light-black: rgba(255,255,255,0.1)
+    --border-light-black: rgba(255,255,255,0.1);
+    --light-black: #434242;
     /* --bg: #efefef;
     --green: #88b452;
     --normal-text: #000000; */
@@ -328,7 +329,7 @@ input:checked + span::before {
 }
 
 .loxone_header{
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 30px;
     text-align: center;
 }
@@ -443,7 +444,7 @@ input:checked + span::before {
     text-transform: uppercase;
     font-size: 2rem;
     color: var(--green);
-    margin-top:20px;                        
+    margin-top:40px;                        
 }
 
 .ref_slider_container{
@@ -459,6 +460,7 @@ input:checked + span::before {
     /* border-top:2px solid var(--border-light-black);
     border-bottom:2px solid var(--border-light-black); */
     margin-top:60px;
+    margin-bottom: 60px;
   }
 
 /* .swiper-slide{
@@ -601,7 +603,7 @@ input:checked + span::before {
 .about_col{
     margin-left: 40px;
     margin-right:40px;
-    background-color: #efefef;
+    background-color: var(--light-black);
     /* border: 1px solid white; */
     /* margin: 0px; */
     display: flex;
@@ -628,21 +630,20 @@ input:checked + span::before {
 .about_header{
     display:block;
     text-align: center;
-    padding-top:20px;
+    padding-top:40px;
     padding-bottom: 20px;
 }
 
 .section2 img{
     width: 163px;
     height: 229px; 
-    margin: 3px; 
+    /* margin: 3px;  */
 }
 
 .about_container h1{
     font-weight: 500;
     text-transform: uppercase;
     font-size: 2rem;
-    padding-top: 20px;
     color: var(--green);
 }
 
@@ -712,7 +713,7 @@ input:checked + span::before {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 2rem;
-    padding-top: 20px;
+    padding-top: 40px;
     color: var(--green);
 }
 
@@ -801,8 +802,8 @@ input:checked + span::before {
     margin: 2rem auto;
   }
   .accordion-item {
-    background-color: #fff;
-    color: #111;
+    background-color: var(--light-black);
+    color: var(--normal-text);
     margin: 1rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
@@ -844,7 +845,7 @@ input:checked + span::before {
   }
 
   .accordion-item p{
-    color:black;
+    color:var(--normal-text);
     
   }
   
@@ -879,7 +880,7 @@ input:checked + span::before {
 }
 
 .contact_content p{
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color:var(--normal-text);
 }
@@ -888,12 +889,14 @@ input:checked + span::before {
     display:flex;
     width: 50%;
     justify-content: center;
+    padding-left: 200px;
     }
 
 .contact_invoice_address{
     display:flex;
     width: 50%;
     justify-content: center;
+    padding-right: 200px;
     
 }
 .contact_header h1{

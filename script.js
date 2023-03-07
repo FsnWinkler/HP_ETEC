@@ -78,7 +78,7 @@ $(document).ready(function() {
   $('.grow-on-hover').hover(function() {
     // Increase the size of the image by 10%
     $(this).css({
-      'transform': 'scale(1.1)',
+      'transform': 'scale(1.05)',
       'z-index': '1'
     });
   }, function() {
@@ -139,11 +139,15 @@ console.log(input.checked)
 
 input.addEventListener('change',function(){
   if(this.checked) {
-    root_values.style.setProperty('--bg', 'white');
+    root_values.style.setProperty('--bg', '#F5F5F5');
     root_values.style.setProperty('--normal-text', '#000000');
+    root_values.style.setProperty('--border-light-black', 'black');
+    root_values.style.setProperty('--light-black', 'white');
   } else {
     root_values.style.setProperty('--bg', '#1e2323');
     root_values.style.setProperty('--normal-text', '#ffffff');
+    root_values.style.setProperty('--border-light-black', 'rgba(255,255,255,0.1)');
+    root_values.style.setProperty('--light-black', '#434242');
   }
 });
 
