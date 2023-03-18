@@ -25,6 +25,24 @@ $(document).ready(function() {
             scrollTop: $("#home").offset().top - 70
         }, 2000);
     });
+    $("#loxone_link").click(function(event) {
+      event.preventDefault();
+      $("html, body").animate({
+          scrollTop: $("#loxone").offset().top - 70
+      }, 2000);
+  });
+  $("#jobs_link").click(function(event) {
+    event.preventDefault();
+    $("html, body").animate({
+        scrollTop: $("#jobs").offset().top - 70
+    }, 2000);
+    $("#contact_link").click(function(event) {
+      event.preventDefault();
+      $("html, body").animate({
+          scrollTop: $("#contact").offset().top - 70
+      }, 2000);
+  });
+});
 });
 
 $(".service_col").hover(

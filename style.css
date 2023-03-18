@@ -881,7 +881,7 @@ input:checked + span::before {
 }
 
 .contact_content p{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color:var(--normal-text);
 }
@@ -890,14 +890,14 @@ input:checked + span::before {
     display:flex;
     width: 50%;
     justify-content: center;
-    padding-left: 200px;
+    padding-left: 300px;
     }
 
 .contact_invoice_address{
     display:flex;
     width: 50%;
     justify-content: center;
-    padding-right: 200px;
+    padding-right: 300px;
     
 }
 .contact_header h1{
